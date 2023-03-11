@@ -1,7 +1,7 @@
 {
   "name": "todovue-button",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "demo": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit",
