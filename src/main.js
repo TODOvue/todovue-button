@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Demo from "./Demo.vue";
+import TvButton from "./component/TvButton.vue";
 import "@/assets/scss/global.scss";
 
-createApp(Demo).mount("#todovue-button");
+createApp(TvButton).mount("#todovue-button");
