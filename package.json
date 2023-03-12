@@ -25,7 +25,7 @@
     "demo": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --name tvbutton src/component/TvButton.vue"
+    "build": "vue-cli-service build --target lib --name tvbutton src/component/TvButton.vue --config webpack.config.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
