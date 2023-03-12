@@ -51,93 +51,101 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/mixins.scss";
-
-.dark-mode {
-  & button {
-    @include defaultButton(
-      $color-background-button-dark,
-      $color-text-button-dark
-    );
-
-    &.is-outlined {
-      background-color: transparent;
-      border: 3px solid $color-background-button-dark;
-
-      &:hover {
-        background: $color-background-button-dark;
-      }
-    }
-  }
+<style scoped>
+.dark-mode button {
+  background-color: var(--color-background-button-dark);
+  color: var(--color-text-button-dark);
 }
 
-.light-mode {
-  & button {
-    @include defaultButton(
-      $color-background-button-light,
-      $color-text-button-light
-    );
-
-    &.is-outlined {
-      background-color: transparent;
-      border: 3px solid $color-background-button-light;
-      color: $color-background-button-light;
-
-      &:hover {
-        background: $color-background-button-light;
-        color: $color-text-button-dark;
-      }
-    }
-  }
+.light-mode button {
+  background-color: var(--color-background-button-light);
+  color: var(--color-text-button-light);
 }
 
 button {
   width: 150px;
-  &.is-success {
-    background: $color-background-button-success;
-    box-shadow: 0 0 5px $color-background-button-success;
-    &:hover {
-      background-color: darken($color-background-button-success, 10%);
-    }
-  }
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 0 5px var(--color-background-button-dark);
+}
 
-  &.is-full {
-    width: 100%;
-  }
+button:hover {
+  box-shadow: none;
+}
 
-  &.is-rounded {
-    border-radius: 10px;
-  }
+button:active {
+  background-color: var(--color-background-button-dark-darken);
+  transform: translateY(2px);
+}
 
-  &.is-small {
-    min-width: 120px !important;
-    width: 80px !important;
-    font-size: 14px;
-    padding: 0.7rem 0.5rem;
-    white-space: nowrap;
-  }
+button.is-outlined {
+  font-weight: 600;
+  background-color: transparent;
+  border: 3px solid var(--color-background-button-dark);
+}
 
-  &.is-large {
-    width: 300px;
-  }
+button.is-outlined:hover {
+  background: var(--color-background-button-dark);
+}
 
-  & .icon-add {
-    @include defaultIcon("@/assets/icons/add.svg", 18px);
-  }
+.light-mode button.is-outlined {
+  color: var(--color-background-button-light);
+}
 
-  & .icon-remove {
-    @include defaultIcon("@/assets/icons/remove.svg", 18px);
-  }
+.light-mode button.is-outlined:hover {
+  color: var(--color-text-button-dark);
+}
 
-  &.is-outlined {
-    font-weight: 600;
-  }
+button.is-success {
+  background: var(--color-background-button-success);
+  box-shadow: 0 0 5px var(--color-background-button-success);
+}
 
-  & i {
-    float: right;
-    margin-right: 8px;
-  }
+button.is-success:hover {
+  box-shadow: none;
+  background-color: var(--color-background-button-success-darken);
+}
+
+button.is-full {
+  width: 100%;
+}
+
+button.is-rounded {
+  border-radius: 10px;
+}
+
+button.is-small {
+  min-width: 120px;
+  width: 80px;
+  font-size: 14px;
+  padding: 0.7rem 0.5rem;
+  white-space: nowrap;
+}
+
+button.is-large {
+  width: 300px;
+}
+
+button i {
+  float: right;
+  margin-right: 8px;
+}
+
+button .icon-add {
+  background-image: url("@/assets/icons/add.svg");
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+
+button .icon-remove {
+  background-image: url("@/assets/icons/remove.svg");
+  background-size: cover;
+  width: 18px;
+  height: 18px;
 }
 </style>

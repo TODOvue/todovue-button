@@ -10,12 +10,12 @@
     "url": "https://github.com/TODOvue/todovue-button.git"
   },
   "keywords": [
+    "todovue",
     "front-end",
     "web",
     "vue",
     "vuejs",
-    "vue-js",
-    "todovue"
+    "vue-js"
   ],
   "bugs": {
     "url": "https://github.com/todovue/todovue-button/issues"
@@ -45,8 +45,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
-    "prettier": "^2.4.1",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0"
+    "prettier": "^2.4.1"
   }
 }
