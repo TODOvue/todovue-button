@@ -2,12 +2,29 @@
   "name": "todovue-button",
   "version": "0.1.1",
   "private": false,
-  "main": "src/component/TvButton.vue",
+  "main": "dist/tvbutton.common.js",
+  "author": "Cristhian Daza",
+  "description": "Component button created for the TodoVue blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODOvue/todovue-button.git"
+  },
+  "keywords": [
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "todovue"
+  ],
+  "bugs": {
+    "url": "https://github.com/todovue/todovue-button/issues"
+  },
   "scripts": {
     "demo": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --target lib --name tvbutton src/component/TvButton.vue"
   },
   "dependencies": {
     "core-js": "^3.8.3",
