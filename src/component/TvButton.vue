@@ -8,7 +8,7 @@
       'is-large': isLarge,
       'is-success': isSuccess,
     }"
-    @click="$emit('handleClick')"
+    @click="handleClick"
   >
     <i v-if="icon" :class="`icon-${icon}`"></i>
     <slot></slot>
@@ -46,6 +46,11 @@ export default {
     icon: {
       type: String,
       default: "",
+    },
+  },
+  methods: {
+    handleClick() {
+      this.$emit("click");
     },
   },
 };

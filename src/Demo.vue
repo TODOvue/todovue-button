@@ -11,6 +11,7 @@
         :is-success="demo.buttonProps.isSuccess"
         :icon="demo.buttonProps.icon"
         :is-full="demo.buttonProps.isFull"
+        @click="clickedDemo"
       >
         {{ demo.buttonText }}
       </tv-button>
@@ -77,6 +78,11 @@ export default {
   components: {
     TvDemo,
     TvButton,
+  },
+  methods: {
+    clickedDemo() {
+      console.log("clicked demo");
+    },
   },
 };
 </script>
