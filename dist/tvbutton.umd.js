@@ -118,25 +118,35 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvButton.vue?vue&type=template&id=87bbc1a0&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvButton.vue?vue&type=template&id=f811bba2
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("button", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)({
-      'is-rounded': $props.isRounded,
-      'is-full': $props.isFull,
-      'is-outlined': $props.isOutlined,
-      'is-small': $props.isSmall,
-      'is-large': $props.isLarge,
-      'is-success': $props.isSuccess
-    }),
-    onClick: _cache[0] || (_cache[0] = $event => _ctx.$emit('handleClick'))
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["tv-btn", {
+      'tv-btn-rounded': $props.isRounded,
+      'tv-btn-full': $props.isFull,
+      'tv-btn-outlined': $props.isOutlined,
+      'tv-btn-small': $props.isSmall,
+      'tv-btn-large': $props.isLarge,
+      'tv-btn-success': $props.isSuccess,
+      'tv-btn-info': $props.isInfo,
+      'tv-btn-warning': $props.isWarning,
+      'tv-btn-error': $props.isError,
+      'tv-btn-disabled': $props.isDisabled,
+      'tv-btn-circle': $props.isCircle,
+      'tv-btn-text': $props.isText
+    }]),
+    onClick: _cache[0] || (_cache[0] = (...args) => $options.handleClick && $options.handleClick(...args))
   }, [$props.icon ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("i", {
     key: 0,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(`icon-${$props.icon}`)
-  }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {}, undefined, true)], 2);
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["tv-btn-icon", `tv-icon-${$props.icon} tv-icon-position-${$props.iconPosition}`])
+  }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), !$props.text ? (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {
+    key: 1
+  }) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $props.text ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, {
+    key: 2
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)($props.text), 1)], 64)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)], 2);
 }
-;// CONCATENATED MODULE: ./src/component/TvButton.vue?vue&type=template&id=87bbc1a0&scoped=true
+;// CONCATENATED MODULE: ./src/component/TvButton.vue?vue&type=template&id=f811bba2
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvButton.vue?vue&type=script&lang=js
 /* harmony default export */ var TvButtonvue_type_script_lang_js = ({
@@ -169,16 +179,48 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     icon: {
       type: String,
       default: ""
+    },
+    isInfo: {
+      type: Boolean,
+      default: false
+    },
+    isWarning: {
+      type: Boolean,
+      default: false
+    },
+    isError: {
+      type: Boolean,
+      default: false
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false
+    },
+    isCircle: {
+      type: Boolean,
+      default: false
+    },
+    isText: {
+      type: Boolean,
+      default: false
+    },
+    text: {
+      type: String,
+      default: ""
+    },
+    iconPosition: {
+      type: String,
+      default: "right"
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit("click");
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/component/TvButton.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvButton.vue?vue&type=style&index=0&id=87bbc1a0&scoped=true&lang=css
-// extracted by mini-css-extract-plugin
-
-;// CONCATENATED MODULE: ./src/component/TvButton.vue?vue&type=style&index=0&id=87bbc1a0&scoped=true&lang=css
-
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(620);
 ;// CONCATENATED MODULE: ./src/component/TvButton.vue
@@ -187,9 +229,7 @@ var exportHelper = __webpack_require__(620);
 
 
 ;
-
-
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(TvButtonvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-87bbc1a0"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(TvButtonvue_type_script_lang_js, [['render',render]])
 
 /* harmony default export */ var TvButton = (__exports__);
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
