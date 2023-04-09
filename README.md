@@ -1,7 +1,8 @@
-<img width="300" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<img width="200" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
 
-[![npm version](https://badge.fury.io/js/todovue-button.svg)](https://badge.fury.io/js/todovue-button)
+[![npm](https://img.shields.io/npm/v/todovue-button.svg)](https://www.npmjs.com/package/todovue-button) [![Netlify Status](https://api.netlify.com/api/v1/badges/8c4e2401-fefe-4f40-ae83-40681ecc36a5/deploy-status)](https://app.netlify.com/sites/todovue-demo/deploys)
 
+<img width="800" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/imagesGit%2Ftodovue-button.png?alt=media&token=bf562982-4fb8-49e4-a7ce-34b61f165135" alt="TODOvue Button">
 
 ## Project setup
 ```
