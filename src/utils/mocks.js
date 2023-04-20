@@ -2,15 +2,21 @@ export const demos = [
   {
     id: 1,
     title: "TvButton Default",
-    propsData: { text: "Default" },
+    propsData: { buttonText: "Default" },
     html: `<tv-button>
   Default
 </tv-button>`,
   },
   {
+    id: 20,
+    title: "TvButton Default (The text is sent by props)",
+    propsData: { buttonText: "Default Props" },
+    html: `<tv-button buttonText="Default Props" />`,
+  },
+  {
     id: 2,
     title: "TvButton Small",
-    propsData: { text: "Small", isSmall: true },
+    propsData: { buttonText: "Small", isSmall: true },
     html: `<tv-button isSmall>
   Small
 </tv-button>`,
@@ -18,7 +24,7 @@ export const demos = [
   {
     id: 3,
     title: "TvButton Rounded",
-    propsData: { text: "Rounded", isRounded: true },
+    propsData: { buttonText: "Rounded", isRounded: true },
     html: `<tv-button isRounded>
   Rounded
 </tv-button>`,
@@ -26,7 +32,7 @@ export const demos = [
   {
     id: 4,
     title: "TvButton Full",
-    propsData: { text: "Full", isFull: true },
+    propsData: { buttonText: "Full", isFull: true },
     html: `<tv-button isFull>
   Full
 </tv-button>`,
@@ -34,7 +40,7 @@ export const demos = [
   {
     id: 5,
     title: "TvButton Outlined",
-    propsData: { text: "Outlined", isOutlined: true },
+    propsData: { buttonText: "Outlined", isOutlined: true },
     html: `<tv-button isOutlined>
   Outlined
 </tv-button>`,
@@ -42,7 +48,7 @@ export const demos = [
   {
     id: 6,
     title: "TvButton Large",
-    propsData: { text: "Large", isLarge: true },
+    propsData: { buttonText: "Large", isLarge: true },
     html: `<tv-button isLarge>
   Large
 </tv-button>`,
@@ -50,7 +56,7 @@ export const demos = [
   {
     id: 7,
     title: "TvButton Success",
-    propsData: { text: "Success", isSuccess: true },
+    propsData: { buttonText: "Success", isSuccess: true },
     html: `<tv-button isSuccess>
   Success
 </tv-button>`,
@@ -58,7 +64,7 @@ export const demos = [
   {
     id: 8,
     title: "TvButton Info",
-    propsData: { text: "Info", isInfo: true },
+    propsData: { buttonText: "Info", isInfo: true },
     html: `<tv-button isInfo>
   Info
 </tv-button>`,
@@ -66,7 +72,7 @@ export const demos = [
   {
     id: 9,
     title: "TvButton Warning",
-    propsData: { text: "Warning", isWarning: true },
+    propsData: { buttonText: "Warning", isWarning: true },
     html: `<tv-button isWarning>
   Warning
 </tv-button>`,
@@ -74,7 +80,7 @@ export const demos = [
   {
     id: 10,
     title: "TvButton Error",
-    propsData: { text: "Error", isError: true },
+    propsData: { buttonText: "Error", isError: true },
     html: `<tv-button isError>
   Error
 </tv-button>`,
@@ -82,7 +88,7 @@ export const demos = [
   {
     id: 11,
     title: "TvButton Disabled",
-    propsData: { text: "Disabled", isDisabled: true },
+    propsData: { buttonText: "Disabled", isDisabled: true },
     html: `<tv-button isDisabled>
   Disabled
 </tv-button>`,
@@ -90,7 +96,7 @@ export const demos = [
   {
     id: 12,
     title: "TvButton Circle",
-    propsData: { text: "X", isCircle: true },
+    propsData: { buttonText: "X", isCircle: true },
     html: `<tv-button isCircle>
   X
 </tv-button>`,
@@ -98,23 +104,23 @@ export const demos = [
   {
     id: 13,
     title: "TvButton Text",
-    propsData: { text: "Text", isText: true },
-    html: `<tv-button isText>
+    propsData: { buttonText: "Text", isText: true },
+    html: `<tv-button isbuttonText>
   Text
 </tv-button>`,
   },
   {
     id: 14,
     title: "TvButton Icon Edit position: Right (Default)",
-    propsData: { text: "Icon", icon: "edit" },
+    propsData: { buttonText: "Icon", icon: "edit" },
     html: `<tv-button icon="edit">
   Icon
 </tv-button>`,
   },
   {
     id: 15,
-    title: "TvButton Icon Add (Position: Left)",
-    propsData: { text: "Icon", icon: "add", iconPosition: "left" },
+    title: "TvButton Icon PLus (Position: Left)",
+    propsData: { buttonText: "Icon", icon: "plus", iconPosition: "left" },
     html: `<tv-button icon="add" iconPosition="left">
   Icon
 </tv-button>`,
@@ -123,7 +129,7 @@ export const demos = [
     id: 16,
     title: "TvButton: various props 1",
     propsData: {
-      text: "Press me",
+      buttonText: "Press me",
       isSmall: true,
       isRounded: true,
       isOutlined: true,
@@ -136,7 +142,7 @@ export const demos = [
     id: 17,
     title: "TvButton: various props 2",
     propsData: {
-      text: "Press me",
+      buttonText: "Press me",
       isLarge: true,
       isInfo: true,
       isOutlined: true,
@@ -149,7 +155,7 @@ export const demos = [
     id: 18,
     title: "TvButton: various props 3",
     propsData: {
-      text: "Press me",
+      buttonText: "Press me",
       isFull: true,
       isWarning: true,
       isRounded: true,
@@ -162,7 +168,7 @@ export const demos = [
     id: 19,
     title: "TvButton: various props 4",
     propsData: {
-      text: "Press me",
+      buttonText: "Press me",
       isSuccess: true,
       isRounded: true,
       isDisabled: true,

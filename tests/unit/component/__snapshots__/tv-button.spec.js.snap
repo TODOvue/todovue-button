@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TvButton Component should matches snapshot 1`] = `
-<button class="tv-btn">
+<button class="tv-btn" text="Press me">
   <!--v-if-->
-  <!--v-if-->Press me
+  <!--v-if-->
 </button>
 `;

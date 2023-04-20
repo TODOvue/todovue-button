@@ -22,8 +22,8 @@
       class="tv-btn-icon"
       :class="`tv-icon-${icon} tv-icon-position-${iconPosition}`"
     ></i>
-    <slot v-if="!text"></slot>
-    <template v-if="text">{{ text }}</template>
+    <slot v-if="!buttonText"></slot>
+    <template v-if="buttonText">{{ buttonText }}</template>
   </button>
 </template>
 
@@ -83,7 +83,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    text: {
+    buttonText: {
       type: String,
       default: "",
     },
@@ -92,11 +92,16 @@ export default {
       default: "right",
     },
   },
-  methods: {
-    handleClick() {
-      this.$emit("click");
-    },
+  setup(_, { emit }) {
+    const handleClick = () => {
+      emit("click", {});
+    };
+
+    return {
+      handleClick,
+    };
   },
+  emits: ["click"],
 };
 </script>
 

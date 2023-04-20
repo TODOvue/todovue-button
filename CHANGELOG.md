@@ -1,5 +1,14 @@
 # Changelog **TODOvue Button**
 
+## v2.1.0
+### Dependencies Update
+* Update `todovue-css` to version `1.3.0`
+* Update `todovue-demo` to version `2.2.1`
+### Features
+* Added setup
+### Fixes
+* Change property `text` to `buttonText`
+
 ## v2.0.0
 ### Features
 * Unit tests are added

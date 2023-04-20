@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import { defineComponent, shallowRef } from "vue";
+import { shallowRef } from "vue";
 import TvButton from "@/component/TvButton.vue";
 import TvDemo from "todovue-demo";
 import { demos } from "@/utils/mocks.js";
 
-export default defineComponent({
+export default {
   name: "DemoButton",
   setup() {
     const component = shallowRef(TvButton);
@@ -21,7 +21,7 @@ export default defineComponent({
   components: {
     TvDemo,
   },
-});
+};
 </script>
 
-<style lang="scss"></style>
+<style></style>
