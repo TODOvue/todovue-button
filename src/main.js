@@ -1,6 +1,9 @@
 import { createApp } from "vue";
 import Demo from "./Demo.vue";
 import "vue-highlight-code/dist/style.css";
-import "todovue-css/dist/todovue.css";
+import "@/assets/scss/_global.scss";
+import TvDemo from "todovue-demo";
 
-createApp(Demo).mount("#todovue-button");
+const app = createApp(Demo);
+app.component("TvDemo", TvDemo);
+app.mount("#todovue-button");
