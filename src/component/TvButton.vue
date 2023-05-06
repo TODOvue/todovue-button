@@ -11,8 +11,8 @@
       isHover ? buttonStyleHover : '',
     ]"
     class="tv-btn"
-    role="button"
-    type="button"
+    :role="type"
+    :type="type"
   >
     <i
       v-if="icon"
@@ -93,6 +93,10 @@ export default {
     customStyle: {
       type: Object,
       default: () => {},
+    },
+    type: {
+      type: String,
+      default: "button",
     },
   },
   setup(props) {
