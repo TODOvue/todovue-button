@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Lato:wght@300&display=swap');
+
+/*Dark Theme*/
+$color-background-body-dark: #7A7D7D;
+$color-background-button-dark: #EF233C;
+$color-background-card-dark: #0E131F;
+$color-text-button-dark: #AFDEDC;
+$color-text-dark: #F4FAFF;
+
+/*Light Theme*/
+$color-background-body-light: #E0E1E1;
+$color-background-button-light: #EF233C;
+$color-background-card-light: #B9C4DF;
+$color-text-button-light: #F1F9F9;
+$color-text-light: #000B14;
+
+/*Global*/
+$color-background-button-error: #ff0020;
+$color-background-button-info: #2F80ED;
+$color-background-button-success: #00600F;
+$color-background-button-warning: #F2C94C;
+$font-family-text: 'Lato', sans-serif;
+$font-family-title: 'Kanit', sans-serif;
+
+/*Icons*/
+$icons: (
+  icon-account: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Faccount.svg?alt=media&token=0c85e01b-b840-487d-abea-be9a641e4480',
+  icon-alert: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Falert.svg?alt=media&token=d7f899d9-6c89-451e-abc1-2eacd9f7306a',
+  icon-arrow-down: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-down.svg?alt=media&token=4021c6b4-b71d-42d0-bf58-0b643da9e58f',
+  icon-arrow-left: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-left.svg?alt=media&token=fd702c4f-9b00-4edf-88f6-7a53306f1884',
+  icon-arrow-right: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-right.svg?alt=media&token=6ae5f38c-bfb2-476e-887c-3b57e2758fca',
+  icon-arrow-up: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-up.svg?alt=media&token=82a32e0b-1fba-49ba-ace6-1fb153984dee',
+  icon-cancel: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fcancel.svg?alt=media&token=d6409978-0540-483d-8ee7-4d2ea64529ba',
+  icon-cancel-light: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fcancel-light.svg?alt=media&token=89913bdb-00ea-4296-a341-6de501ccec15',
+  icon-edit: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fedit.svg?alt=media&token=088cf30d-9945-46f8-bf27-650287dba73a',
+  icon-dark: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fdark.svg?alt=media&token=4675b6ef-d85a-4989-b3ea-dd76755cfc56',
+  icon-favorite: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Ffavorite.svg?alt=media&token=38136d70-105e-42f8-8cbe-44cd36eb5705',
+  icon-help: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fhelp.svg?alt=media&token=7781a3fe-7c6a-4634-be11-2e066c0ccf7d',
+  icon-light: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Flight.svg?alt=media&token=4b6485a2-6853-41b7-89a1-17c466947f59',
+  icon-menu: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fmenu.svg?alt=media&token=0f0b18c3-5bd6-40ee-95ee-5492347d7ae7',
+  icon-menu-light: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fmenu-light.svg?alt=media&token=9faaaec2-e2fd-4689-9723-1b1901fb42a3',
+  icon-minus: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fminus.svg?alt=media&token=99f03afc-6307-45d9-bd64-0036462ae06e',
+  icon-plus: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fplus.svg?alt=media&token=4f7912a2-4508-45b0-ab28-c301cfaa701f',
+  icon-remove: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fremove.svg?alt=media&token=d1b5c767-0a7b-4aad-bc0e-140fbf55a6c2',
+  icon-search: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fsearch.svg?alt=media&token=a3ebec80-8cfe-4ea5-b8ab-defa440c9a23',
+  icon-search-light: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fsearch-light.svg?alt=media&token=398b1f34-9376-4aa3-86ed-cfd040bf080b',
+  icon-settings: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fsettings.svg?alt=media&token=be7070c0-6cb1-4bd0-8932-4e6d208c9768',
+  icon-share: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fshare.svg?alt=media&token=0762b95f-0520-4cf4-98ca-fe3a76f6d0f8',
+  icon-star: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fstar.svg?alt=media&token=f41c443e-1b89-4733-b766-1c7f82a8ff8a'
+);

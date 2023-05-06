@@ -1,5 +1,19 @@
 # Changelog **TODOvue Button**
 
+## v2.3.0
+### Dependencies Update
+* The `todovue-css` component is removed
+### Features
+* The sass module is added to the project
+* A composable is created for the button logic
+* Button customization is added with `customStyle`
+* Added functionality to `hover` by sending a `customClass` to it
+* The `_getDarkerColor` function is created to darken the color sent by `customClass` when hovering
+* The demo of the component is updated
+### Fixes
+* The isCircle property is removed
+* 100% test coverage is reached
+
 ## v2.2.0
 ### Dependencies Update
 * Update `todovue-css` to version `1.7.0`
