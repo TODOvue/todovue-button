@@ -14,11 +14,12 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
+- [Events](#events)
 - [Customize](#customize)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-demo/blob/master/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-demo/blob/master/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-demo/blob/master/LICENSE)
+- [Changelog](https://github.com/TODOvue/todovue-button/blob/master/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/todovue-button/blob/master/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/todovue-button/blob/master/LICENSE)
 
 ## Installation
 Install with npm or yarn
@@ -63,10 +64,10 @@ app.mount("#app");
       const clickHandler = () => {
         console.log("clicked");
       }
-    }
 
-    return {
-      clickHandler
+      return {
+        clickHandler
+      }
     }
   }
 </script>
@@ -116,11 +117,16 @@ You can use the following icons (`icon="account"`):
  - `share`
  - `star`
 
+## Events
+| Name         | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| click-button | Emitted when the button is clicked. You can use it to call a function, etc. |
+
 ## Customize
 You can customize the button style by passing an object to the `customStyle` prop. You can include `backgroundColor` and `color`.
 ```html
 <template>
-  <tv-button :customStyle="customStyle">
+  <tv-button :customStyle="customStyle" @click-button="clickHandler">
     Default
   </tv-button>
 </template>
@@ -133,10 +139,15 @@ You can customize the button style by passing an object to the `customStyle` pro
         backgroundColor: "#000",
         color: "#fff"
       })
-    }
+      
+      const clickHandler = () => {
+        console.log("clicked");
+      }
 
-    return {
-      customStyle
+      return {
+        customStyle,
+        clickHandler
+      }
     }
   }
 </script>
@@ -146,6 +157,8 @@ You can customize the button style by passing an object to the `customStyle` pro
 Clone the repository and install the dependencies
 ```bash
 git clone https://github.com/TODOvue/todovue-button.git
+```
+```bash
 cd todovue-button
 ```
 
