@@ -13,7 +13,7 @@ We appreciate your contributions to make `TODOvue Button` better!
 
 ## Contributing Code Changes
 If you want to contribute code changes to `TODOvue Button`, please follow these guidelines:
-1. Create a new branch from `develop` for your changes with a descriptive name like `feature/new-feature` or `bugfix/fix-bug`.
+1. Create a new branch from `develop` for your changes with a descriptive name like `feature/new-feature` or `bugfix/fix-bug`. If it is to fix a bug in production, it should be created from the `master` branch as `hotfix/fix-bug`.
 2. If you add new features, make sure to include unit tests.
 3. If you add a function that is not exported to the template, prefix it with an underscore to indicate it is a private method.
 4. When making changes, update the CHANGELOG.md file with any new features, bug fixes, or dependency updates.

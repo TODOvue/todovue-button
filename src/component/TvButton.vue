@@ -1,33 +1,32 @@
 <template>
   <button
-    class="tv-btn"
-    :class="{
-      'tv-btn-rounded': isRounded,
-      'tv-btn-full': isFull,
-      'tv-btn-outlined': isOutlined,
-      'tv-btn-small': isSmall,
-      'tv-btn-large': isLarge,
-      'tv-btn-success': isSuccess,
-      'tv-btn-info': isInfo,
-      'tv-btn-warning': isWarning,
-      'tv-btn-error': isError,
-      'tv-btn-disabled': isDisabled,
-      'tv-btn-circle': isCircle,
-      'tv-btn-text': isText,
-    }"
+    :class="buttonClasses"
+    :disabled="isDisabled"
     @click="handleClick"
+    @mouseleave="manageHover(false)"
+    @mouseover="manageHover(true)"
+    :style="[
+      buttonStyleCustom.backgroundColor,
+      buttonStyleCustom.color,
+      isHover ? buttonStyleHover : '',
+    ]"
+    class="tv-btn"
+    :role="type"
+    :type="type"
   >
     <i
       v-if="icon"
       class="tv-btn-icon"
       :class="`tv-icon-${icon} tv-icon-position-${iconPosition}`"
     ></i>
-    <slot v-if="!buttonText"></slot>
     <template v-if="buttonText">{{ buttonText }}</template>
+    <slot v-else></slot>
   </button>
 </template>
 
 <script>
+import useButton from "@/composable/useButton";
+
 export default {
   name: "TvButton",
   props: {
@@ -91,18 +90,36 @@ export default {
       type: String,
       default: "right",
     },
+    customStyle: {
+      type: Object,
+      default: () => {},
+    },
+    type: {
+      type: String,
+      default: "button",
+    },
   },
-  setup(_, { emit }) {
-    const handleClick = () => {
-      emit("click", {});
-    };
+  setup(props) {
+    const {
+      isHover,
+      handleClick,
+      manageHover,
+      buttonClasses,
+      buttonStyleCustom,
+      buttonStyleHover,
+    } = useButton(props);
 
     return {
+      isHover,
       handleClick,
+      manageHover,
+      buttonClasses,
+      buttonStyleCustom,
+      buttonStyleHover,
     };
   },
-  emits: ["click"],
+  emits: ["clickButton"],
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss" src="../assets/scss/style.scss"></style>

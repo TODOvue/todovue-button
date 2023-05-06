@@ -1,0 +1,50 @@
+@import "variables";
+@import "mixins";
+@import "global";
+
+.tv-btn {
+  @include defaultButton();
+
+  & i.tv-btn-icon {
+    @include defaultIconSize(18px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.tv-btn-full {
+    width: 100%;
+  }
+
+  &.tv-btn-rounded {
+    border-radius: 10px;
+  }
+
+  &.tv-btn-small {
+    @include buttonSize(80px, auto, 10px, 0.7rem 0.5rem);
+  }
+
+  &.tv-btn-large {
+    @include buttonSize(180px, auto, 16px, 1rem 1.5rem);
+  }
+
+  &.tv-btn {
+    @include typeButton($color-background-button-dark, $color-text-dark, $color-background-button-dark);
+  }
+
+  &.tv-btn-success {
+    @include typeButton($color-background-button-success, $color-text-button-light, $color-background-button-success);
+  }
+
+  &.tv-btn-error {
+    @include typeButton($color-background-button-error, $color-text-button-light, $color-background-button-error);
+  }
+
+  &.tv-btn-warning {
+    @include typeButton($color-background-button-warning, $color-text-button-light, $color-background-button-warning);
+  }
+
+  &.tv-btn-info {
+    @include typeButton($color-background-button-info, $color-text-button-light, $color-background-button-info);
+  }
+}

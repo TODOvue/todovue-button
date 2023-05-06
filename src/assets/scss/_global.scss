@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tv {
+  @each $class, $icon in $icons {
+    &-#{$class} {
+      @include defaultIcon($icon);
+    }
+  }
+}
+
+.tv-icon {
+  @include defaultIconSize(18px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tv-icon-position-left {
+  @include floatIcon(left, right, 8px);
+}
+
+.tv-icon-position-right {
+  @include floatIcon(right, left, 8px);
+}
