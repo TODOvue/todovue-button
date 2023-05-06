@@ -54,7 +54,11 @@ app.mount("#app");
 </template>
 
 <script>
+  import TvButton from "todovue-button"; // Only if you have not imported it from main
   export default {
+    components: {
+      TvButton // Only if you have not imported it from main
+    },
     setup() {
       const clickHandler = () => {
         console.log("clicked");
