@@ -1,5 +1,9 @@
 # Changelog **TODOvue Button**
 
+## v2.3.2
+### Fixes
+* Validation is added when darkening the color so as not to show an error
+
 ## v2.3.0
 ### Dependencies Update
 * The `todovue-css` component is removed
