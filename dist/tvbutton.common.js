@@ -2088,14 +2088,18 @@ const useButton = props => {
     isHover.value = value;
   };
   const _getDarkerColor = colorHex => {
-    const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colorHex);
-    let r = parseInt(rgb[1], 16);
-    let g = parseInt(rgb[2], 16);
-    let b = parseInt(rgb[3], 16);
-    r = Math.floor(r * 0.9);
-    g = Math.floor(g * 0.9);
-    b = Math.floor(b * 0.9);
-    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+    if (!colorHex) return;
+    if (colorHex[0] === "#") {
+      const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colorHex);
+      let r = parseInt(rgb[1], 16);
+      let g = parseInt(rgb[2], 16);
+      let b = parseInt(rgb[3], 16);
+      r = Math.floor(r * 0.9);
+      g = Math.floor(g * 0.9);
+      b = Math.floor(b * 0.9);
+      return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+    }
+    return colorHex;
   };
   const buttonClasses = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.computed)(() => {
     return {
