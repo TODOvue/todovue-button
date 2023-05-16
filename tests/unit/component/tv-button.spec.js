@@ -128,5 +128,34 @@ describe("TvButton Component", () => {
       };
       expect(wrapper.vm.buttonStyleHover).toEqual(expected);
     });
+
+    it("Should not return anything if the color is not sent.", () => {
+      const props = {
+        customStyle: {
+          backgroundColor: null,
+        },
+        isOutlined: false,
+      };
+      const wrapper = shallowMount(TvButton, { props });
+      const expected = {
+        boxShadow: "none",
+      };
+      expect(wrapper.vm.buttonStyleHover).toEqual(expected);
+    });
+
+    it("It should return the color if it is not sent in hexadecimal.", () => {
+      const props = {
+        customStyle: {
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+        },
+        isOutlined: false,
+      };
+      const wrapper = shallowMount(TvButton, { props });
+      const expected = {
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        boxShadow: "none",
+      };
+      expect(wrapper.vm.buttonStyleHover).toEqual(expected);
+    });
   });
 });
