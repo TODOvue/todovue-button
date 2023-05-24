@@ -3,6 +3,8 @@
   "version": "2.3.2",
   "private": false,
   "main": "dist/tvbutton.common.js",
+  "module": "dist/tvbutton.esm.js",
+  "unpkg": "dist/tvbutton.umd.min.js",
   "author": "Cristhian Daza",
   "description": "Component button created for the TodoVue blog",
   "license": "MIT",
@@ -30,12 +32,11 @@
     "demo": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --name tvbutton --webpack-config webpack.config.js src/component/TvButton.vue"
+    "build": "vue-cli-service build --target lib --name tvbutton --webpack-config webpack.config.js src/component/TvButton.vue",
+    "build:nuxt": "vue-cli-service build --target lib --name tvbutton src/index.js",
+    "prepublishOnly": "yarn build:nuxt"
   },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
@@ -58,5 +59,9 @@
     "vue-loader": "^17.1.0",
     "vue-template-compiler": "^2.7.14",
     "webpack": "^5.81.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.13",
+    "core-js": "^3.8.3"
   }
 }
