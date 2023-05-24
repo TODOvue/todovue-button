@@ -3,7 +3,6 @@
   "version": "2.3.2",
   "private": false,
   "main": "dist/tvbutton.common.js",
-  "module": "dist/tvbutton.esm.js",
   "unpkg": "dist/tvbutton.umd.min.js",
   "author": "Cristhian Daza",
   "description": "Component button created for the TodoVue blog",
