@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import useButton from "@/composable/useButton";
+import useButton from "../composable/useButton";
 
 export default {
   name: "TvButton",

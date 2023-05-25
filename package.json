@@ -2,8 +2,7 @@
   "name": "todovue-button",
   "version": "2.3.2",
   "private": false,
-  "main": "dist/tvbutton.common.js",
-  "unpkg": "dist/tvbutton.umd.min.js",
+  "main": "dist/index.js",
   "author": "Cristhian Daza",
   "description": "Component button created for the TodoVue blog",
   "license": "MIT",
@@ -31,36 +30,44 @@
     "demo": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --name tvbutton --webpack-config webpack.config.js src/component/TvButton.vue",
-    "build:nuxt": "vue-cli-service build --target lib --name tvbutton src/index.js",
-    "prepublishOnly": "yarn build:nuxt"
+    "build:base": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress",
+    "build:ssr": "cross-env NODE_ENV=production webpack --config webpack.config.ssr.js --progress",
+    "build": "npm run build:base && npm run build:ssr"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.12.16",
+    "@babel/preset-env": "^7.21.5",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
-    "babel-jest": "^27.0.6",
+    "babel-loader": "^9.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
+    "node-sass": "^9.0.0",
     "prettier": "^2.4.1",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "todovue-demo": "^3.0.1",
     "vue-loader": "^17.1.0",
     "vue-template-compiler": "^2.7.14",
-    "webpack": "^5.81.0"
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-merge": "^5.9.0"
   },
   "peerDependencies": {
-    "vue": "^3.2.13",
-    "core-js": "^3.8.3"
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
   }
 }

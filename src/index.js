@@ -1,3 +1,16 @@
 import TvButton from "./component/TvButton.vue";
 
-export default TvButton;
+const Button = {
+  install(Vue, args = {}) {
+    if (this.installed) {
+      return;
+    }
+
+    this.installed = true;
+    this.params = args;
+
+    Vue.component(args.componentName || "TvButton", TvButton);
+  },
+};
+
+export default Button;
