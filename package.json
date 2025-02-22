@@ -1,0 +1,57 @@
+{
+  "name": "todovue-button",
+  "private": false,
+  "author": "Cristhian Daza",
+  "description": "Component button created for the TodoVue blog",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODOvue/todovue-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TODOvue/todovue-button/issues"
+  },
+  "keywords": [
+    "todovue",
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "button",
+    "component",
+    "vue-component",
+    "custom-button"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/todovue-button.es.js",
+      "require": "./dist/todovue-button.cjs.js"
+    }
+  },
+  "main": "dist/todovue-button.cjs.js",
+  "module": "dist/todovue-button.es.js",
+  "types": "dist/todovue-button.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
+  }
+}
