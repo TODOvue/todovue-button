@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
+import TvButton from './demo/Demo.vue'
 
-createApp(App).mount('#app')
+createApp(TvButton).mount('#tv-button')
