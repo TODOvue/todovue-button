@@ -1,0 +1,80 @@
+@use "variables";
+@use "mixins";
+@use "global";
+@use "sass:color";
+
+.tv-btn {
+  @include mixins.defaultButton();
+
+  &.tv-btn-full {
+    width: 100%;
+  }
+
+  &.tv-btn-rounded {
+    border-radius: 10px;
+  }
+
+  &.tv-btn-small {
+    @include mixins.buttonSize(80px, auto, 10px, 0.7rem 0.5rem);
+  }
+
+  &.tv-btn-large {
+    @include mixins.buttonSize(180px, auto, 16px, 1rem 1.5rem);
+  }
+
+  &.tv-btn-success {
+    @include mixins.typeButton(
+      variables.$success-bg,
+      variables.$light-button-text,
+      variables.$success-bg
+    );
+  }
+
+  &.tv-btn-error {
+    @include mixins.typeButton(
+      variables.$error-bg,
+      variables.$light-button-text,
+      variables.$error-bg
+    );
+  }
+
+  &.tv-btn-warning {
+    @include mixins.typeButton(
+      variables.$warning-bg,
+      variables.$light-button-text,
+      variables.$warning-bg
+    );
+  }
+
+  &.tv-btn-info {
+    @include mixins.typeButton(
+      variables.$info-bg,
+      variables.$light-button-text,
+      variables.$info-bg
+    );
+  }
+  &.tv-btn-text {
+    @include mixins.buttonText(transparent, variables.$dark-text);
+    padding: 0.8rem 1.2rem;
+    min-width: unset;
+    width: auto;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      @include mixins.backgroundColorAndTextColor(transparent, color.adjust(variables.$dark-text, $lightness: -10%));
+    }
+
+    &:active {
+      @include mixins.backgroundColorAndTextColor(transparent, color.adjust(variables.$dark-text, $lightness: -15%));
+      transform: scale(0.98);
+    }
+  }
+
+  & {
+    @include mixins.typeButton(
+      variables.$dark-button-bg,
+      variables.$dark-text,
+      variables.$dark-button-bg
+    );
+  }
+}

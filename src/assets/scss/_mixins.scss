@@ -1,0 +1,99 @@
+@use "variables";
+@use "sass:color";
+
+@mixin backgroundColorAndTextColor($background-color, $text-color) {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+@mixin defaultButton() {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  min-width: 110px;
+  padding: 0.8rem;
+  transition: all 100ms ease-out;
+  width: auto;
+}
+
+@mixin defaultIconSize($size) {
+  height: #{$size};
+  width: #{$size};
+}
+
+@mixin backgroundColorAndBoxShadow($background-color, $box-shadow) {
+  background-color: $background-color;
+  box-shadow: $box-shadow;
+}
+
+@mixin buttonSize($min-width, $width, $font-size, $padding) {
+  font-size: #{$font-size};
+  min-width: #{$min-width};
+  padding: #{$padding};
+  white-space: nowrap;
+  width: #{$width};
+}
+
+@mixin buttonText($background, $color) {
+  @include backgroundColorAndTextColor($background, $color);
+  border: none;
+  box-shadow: none;
+}
+
+@mixin typeButton($background-color, $color-text-button-light, $color-background) {
+  @include backgroundColorAndTextColor($background-color, $color-text-button-light);
+  box-shadow: 0 0 5px $background-color;
+
+  &:hover {
+    background-color: color.adjust($background-color, $lightness: -10%);
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: color.adjust($background-color, $lightness: -15%);
+    box-shadow: none;
+    transform: scale(0.95);
+  }
+
+  &.tv-btn-outlined {
+    @include backgroundColorAndTextColor(transparent, $background-color);
+    border: 1px solid $background-color;
+
+    &:hover {
+      @include backgroundColorAndTextColor($background-color, $color-text-button-light);
+    }
+
+    &.tv-btn-disabled {
+      &:hover {
+        @include backgroundColorAndTextColor(transparent, $background-color);
+      }
+    }
+  }
+
+  &.tv-btn-text {
+    @include buttonText(transparent, $background-color);
+
+    &:hover {
+      @include backgroundColorAndTextColor(transparent, color.adjust($background-color, $lightness: -10%));
+    }
+
+    &:active {
+      @include backgroundColorAndTextColor(transparent, color.adjust($background-color, $lightness: -15%));
+      transform: none;
+    }
+  }
+
+  &.tv-btn-disabled {
+    @include backgroundColorAndTextColor($color-background, $color-text-button-light);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+  }
+}
+
+@mixin floatIcon($direction, $margin, $number) {
+  float: #{$direction};
+  margin-#{$margin}: #{$number};
+}
