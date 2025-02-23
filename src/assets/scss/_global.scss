@@ -1,0 +1,55 @@
+@use "variables";
+@use "mixins";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tv-icon {
+  @include mixins.defaultIconSize(18px);
+  color: white;
+}
+
+.tv-icon-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg);
+}
+
+.tv-icon-black {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(360deg);
+}
+
+.tv-icon-red {
+  filter: invert(28%) sepia(100%) saturate(5826%) hue-rotate(360deg);
+}
+
+.tv-icon-blue {
+  filter: invert(30%) sepia(93%) saturate(2082%) hue-rotate(200deg);
+}
+
+.tv-icon-green {
+  filter: invert(32%) sepia(84%) saturate(1203%) hue-rotate(93deg);
+}
+
+.tv-icon-position-left {
+  @include mixins.floatIcon(left, right, 8px);
+}
+
+.tv-icon-position-right {
+  @include mixins.floatIcon(right, left, 8px);
+}
+
+.tv-btn-icon {
+  min-width: 40px !important;
+  min-height: 40px !important;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  display: flex !important;
+  & .tv-icon {
+    margin: 0 !important;
+  }
+}
