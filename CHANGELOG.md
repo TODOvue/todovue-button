@@ -11,4 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add new version of the project.
 
-[1.0.0]: https://github.com/CristhianDaza/megaprom/pull/1/files
+[1.0.0]: https://github.com/TODOvue/todovue-button/pull/2
