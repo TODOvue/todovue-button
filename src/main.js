@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
+import TvButton from './demo/Demo.vue'
+import 'vue-highlight-code/dist/style.css';
 
-createApp(App).mount('#app')
+createApp(TvButton).mount('#tv-button')
