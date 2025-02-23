@@ -24,22 +24,22 @@
 ## Installation
 Install with npm or yarn
 ```bash
-npm install todovue-button
+npm install @todovue/tvbutton
 ```
 ```bash
-yarn add todovue-button
+yarn add @todovue/tvbutton
 ```
 
 Import the component:
 ```js
-import { TvButton } from "todovue-button";
+import { TvButton } from "@todovue/tvbutton";
 ```
 
 You can also register it globally in **main.js**:
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvButton from "todovue-button";
+import TvButton from "@todovue/tvbutton";
 
 const app = createApp(App);
 app.component("TvButton", TvButton);
@@ -51,7 +51,7 @@ app.mount("#app");
 ## Usage
 ```html
 <script setup>
-import TvButton from "todovue-button"; // Only if not imported in main.js
+import TvButton from "@todovue/tvbutton"; // Only if not imported in main.js
     
 const handleClick = () => {
   console.log("Clicked!");
@@ -124,7 +124,7 @@ You can customize the button style using `customStyle`. You can include `backgro
 
 ```html
 <script setup>
-import TvButton from "todovue-button";
+import TvButton from "@todovue/tvbutton";
 
 const customStyle = {
   backgroundColor: "#0f2e5b",
