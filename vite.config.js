@@ -2,24 +2,31 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
+const isDemo = process.env.VITE_BUILD_TARGET === "demo";
+
 export default defineConfig({
   plugins: [vue(), cssInjectedByJsPlugin()],
-  build: {
-    lib: {
-      entry: "src/components/TvButton.vue",
-      name: "TvButton",
-      fileName: format => `todovue-button.${format}.js`,
-      formats: ["es", "cjs"]
-    },
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        globals: {
-          vue: "Vue"
+  build: isDemo
+    ? {
+      outDir: "dist-demo",
+      emptyOutDir: true,
+    }
+    : {
+      lib: {
+        entry: "src/components/TvButton.vue",
+        name: "TvButton",
+        fileName: format => `todovue-button.${format}.js`,
+        formats: ["es", "cjs"]
+      },
+      rollupOptions: {
+        external: ["vue"],
+        output: {
+          globals: {
+            vue: "Vue"
+          }
         }
       }
-    }
-  },
+    },
   css: {
     preprocessorOptions: {
       scss: {
