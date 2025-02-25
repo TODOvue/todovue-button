@@ -1,19 +1,23 @@
 <template>
-  <tv-button isText :customStyle="customStyle" @click-button="clickHandler">
+  <tv-button
+    text
+    :customStyle="customStyle"
+    @click="clickHandler"
+  >
     Text
   </tv-button>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent, ref } from 'vue';
 
-const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'))
+const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'));
 
-const customStyle = {
+const customStyle = ref({
   color: "#ffffff",
-}
+});
 
 const clickHandler = () => {
-  console.log("clicked");
-}
+  console.log('clicked');
+};
 </script>

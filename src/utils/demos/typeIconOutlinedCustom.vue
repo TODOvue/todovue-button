@@ -9,16 +9,16 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, ref } from 'vue'
+import { defineAsyncComponent, ref } from 'vue';
 
-const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'))
+const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'));
 
 const customStyle = ref({
-  backgroundColor: "#5f31b7",
-  color: "#fff", // The color will be used for the hover.
+  backgroundColor: '#5f31b7',
+  color: '#fff', // The color will be used for the hover.
 });
 
 const clickHandler = () => {
-  console.log("clicked");
-}
+  console.log('clicked');
+};
 </script>
