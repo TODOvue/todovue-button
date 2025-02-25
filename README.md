@@ -82,6 +82,7 @@ const handleClick = () => {
 | icon         | String  | `null`   | The name of the icon to be displayed inside the button.                            |
 | iconPosition | String  | `right`  | The position of the icon (`left` or `right`).                                      |
 | buttonText   | String  | `null`   | The text inside the button (alternative to using `slot`).                          |
+| ariaLabel    | String  | `''`     | The aria-label attribute for the button.                                           |
 
 ---
 
