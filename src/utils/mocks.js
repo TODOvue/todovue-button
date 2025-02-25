@@ -1,3 +1,27 @@
+import Default from './demos/default.vue?raw';
+import DefaultProps from "./demos/defaultProps.vue?raw";
+import CustomStyle from "./demos/customStyle.vue?raw";
+import CustomStyleOutlined from "./demos/customStyleOutlined.vue?raw";
+import Small from "./demos/small.vue?raw";
+import Rounded from "./demos/rounded.vue?raw";
+import Full from "./demos/full.vue?raw";
+import Outlined from "./demos/outlined.vue?raw";
+import Large from "./demos/large.vue?raw";
+import Success from "./demos/success.vue?raw";
+import Info from "./demos/info.vue?raw";
+import Warning from "./demos/warning.vue?raw";
+import Error from "./demos/error.vue?raw";
+import Disabled from "./demos/disabled.vue?raw";
+import Text from "./demos/text.vue?raw";
+import Icon from "./demos/icon.vue?raw";
+import IconLeft from "./demos/iconLeft.vue?raw";
+import TypeIcon from "./demos/typeIcon.vue?raw";
+import Various1 from "./demos/various1.vue?raw";
+import Various2 from "./demos/various2.vue?raw";
+import Various3 from "./demos/various3.vue?raw";
+import Various4 from "./demos/various4.vue?raw";
+import Various5 from "./demos/various5.vue?raw";
+
 const clickHandler = () => {
   console.log("clicked");
 };
@@ -13,299 +37,153 @@ const defaultScript = () => {
 export const demos = [
   {
     id: 1,
-    title: "TvButton Default",
+    title: "Default",
     propsData: { buttonText: "Default", onClick: clickHandler },
-    html: `<template>
-  <tv-button @click-button="clickHandler">
-    Default
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Default,
   },
   {
-    id: 20,
-    title: "TvButton Default (The text is sent by props)",
+    id: 2,
+    title: "Default (The text is sent by props)",
     propsData: { buttonText: "Default Props" },
-    html: `<template>
-  <tv-button buttonText="Default Props" @click-button="clickHandler"/>
-</template>
-
-${defaultScript()}`,
+    html: DefaultProps,
   },
   {
-    id: 21,
-    title: "TvButton custom style",
+    id: 3,
+    title: "Custom Style",
     propsData: {
       buttonText: "Custom Style",
       customStyle: { backgroundColor: "#0f2e5b", color: "#fff" },
       onClick: clickHandler,
     },
-    // language=HTML
-    html: `<template>
-  <tv-button :customStyle="customStyle" @click-button="clickHandler">
-    Custom Style
-  </tv-button>
-</template>
-
-<script>
-import { ref } from "vue";
-
-export default {
-  setup() {
-    const customStyle = ref({
-      backgroundColor: "#0f2e5b",
-      color: "#fff",
-    });
-
-    const clickHandler = () => {
-      console.log("clicked");
-    }
-    
-    return {
-      customStyle,
-      clickHandler
-    }
-  }
-}
-</script>`,
+    html: CustomStyle,
   },
   {
-    id: 22,
-    title: "TvButton custom style is outlined",
+    id: 4,
+    title: "Small",
+    propsData: { buttonText: "Small", isSmall: true, onClick: clickHandler },
+    html: Small,
+  },
+  {
+    id: 5,
+    title: "Rounded",
+    propsData: {
+      buttonText: "Rounded",
+      isRounded: true,
+      onClick: clickHandler,
+    },
+    html: Rounded,
+  },
+  {
+    id: 6,
+    title: "Full",
+    propsData: { buttonText: "Full", isFull: true, onClick: clickHandler },
+    html: Full,
+  },
+  {
+    id: 7,
+    title: "Outlined",
+    propsData: {
+      buttonText: "Outlined",
+      isOutlined: true,
+      onClick: clickHandler,
+    },
+    html: Outlined,
+  },
+  {
+    id: 8,
+    title: "Custom Style When is Outlined",
     propsData: {
       buttonText: "Is outlined",
       customStyle: { backgroundColor: "#5f31b7", color: "#fff" },
       isOutlined: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button :customStyle="customStyle" is-outlined @click-button="clickHandler">
-    Is outlined"
-  </tv-button>
-</template>
-
-<script>
-import { ref } from "vue";
-
-export default {
-  setup() {
-    const customStyle = ref({
-      backgroundColor: "#5f31b7",
-      color: "#fff", // The color will be used for the hover.
-    });
-    
-    const clickHandler = () => {
-      console.log("clicked");
-    }
-    
-    return {
-      customStyle,
-      clickHandler
-    }
-  }
-}
-</script>`,
+    html: CustomStyleOutlined,
   },
   {
-    id: 2,
-    title: "TvButton Small",
-    propsData: { buttonText: "Small", isSmall: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isSmall @click-button="clickHandler">
-    Small
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 3,
-    title: "TvButton Rounded",
-    propsData: {
-      buttonText: "Rounded",
-      isRounded: true,
-      onClick: clickHandler,
-    },
-    html: `<template>
-  <tv-button isRounded @click-button="clickHandler">
-    Rounded
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 4,
-    title: "TvButton Full",
-    propsData: { buttonText: "Full", isFull: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isFull @click-button="clickHandler">
-    Full
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 5,
-    title: "TvButton Outlined",
-    propsData: {
-      buttonText: "Outlined",
-      isOutlined: true,
-      onClick: clickHandler,
-    },
-    html: `<template>
-  <tv-button isOutlined @click-button="clickHandler">
-    Outlined
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 6,
-    title: "TvButton Large",
+    id: 9,
+    title: "Large",
     propsData: { buttonText: "Large", isLarge: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isLarge @click-button="clickHandler">
-    Large
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Large,
   },
   {
-    id: 7,
-    title: "TvButton Success",
+    id: 10,
+    title: "Success",
     propsData: {
       buttonText: "Success",
       isSuccess: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isSuccess @click-button="clickHandler">
-    Success
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html:Success,
   },
   {
-    id: 8,
-    title: "TvButton Info",
+    id: 11,
+    title: "Info",
     propsData: { buttonText: "Info", isInfo: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isInfo @click-button="clickHandler">
-    Info
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Info,
   },
   {
-    id: 9,
-    title: "TvButton Warning",
+    id: 12,
+    title: "Warning",
     propsData: {
       buttonText: "Warning",
       isWarning: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isWarning @click-button="clickHandler">
-    Warning
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Warning,
   },
   {
-    id: 10,
-    title: "TvButton Error",
+    id: 13,
+    title: "Error",
     propsData: { buttonText: "Error", isError: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isError @click-button="clickHandler">
-    Error
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Error,
   },
   {
-    id: 11,
-    title: "TvButton Disabled",
+    id: 14,
+    title: "Disabled",
     propsData: {
       buttonText: "Disabled",
       isDisabled: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isDisabled @click-button="clickHandler">
-    Disabled
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 13,
-    title: "TvButton Text",
-    propsData: { buttonText: "Text", isText: true, onClick: clickHandler },
-    html: `<template>
-  <tv-button isbuttonText @click-button="clickHandler">
-    Text
-  </tv-button>
-</template>
-
-${defaultScript()}`,
-  },
-  {
-    id: 14,
-    title: "TvButton Icon Edit position: Right (Default)",
-    propsData: { buttonText: "Icon", icon: "edit", onClick: clickHandler },
-    html: `<template>
-  <tv-button icon="edit" @click-button="clickHandler">
-    Icon
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Disabled,
   },
   {
     id: 15,
-    title: "TvButton Icon PLus (Position: Left)",
+    title: "Text",
+    propsData: { buttonText: "Text", isText: true, onClick: clickHandler },
+    html: Text,
+  },
+  {
+    id: 16,
+    title: "Icon (Edit) - Position: right (is default)",
+    propsData: { buttonText: "Icon", icon: "edit", onClick: clickHandler },
+    html: Icon,
+  },
+  {
+    id: 17,
+    title: "Icon (Plus) - Position: left",
     propsData: {
       buttonText: "Icon",
       icon: "plus",
       iconPosition: "left",
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button icon="add" iconPosition="left" @click-button="clickHandler">
-    Icon
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: IconLeft,
   },
   {
-    id: 24,
-    title: "TvButton type icon",
+    id: 18,
+    title: "Type icon (Help)",
     propsData: {
       type: 'icon',
       icon: "help",
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button icon="help" type="icon" @click-button="clickHandler">
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: TypeIcon,
   },
   {
-    id: 16,
-    title: "TvButton: various props 1",
+    id: 19,
+    title: "Various props 1",
     propsData: {
       buttonText: "Press me",
       isSmall: true,
@@ -313,34 +191,22 @@ ${defaultScript()}`,
       isOutlined: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isSmall isRounded isOutlined @click-button="clickHandler">
-    Press me
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Various1,
   },
   {
-    id: 17,
-    title: "TvButton: various props 2",
+    id: 20,
+    title: "Various props 2",
     propsData: {
       buttonText: "Press me",
       isLarge: true,
       isInfo: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isLarge isInfo @click-button="clickHandler">
-    Press me
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Various2,
   },
   {
-    id: 18,
-    title: "TvButton: various props 3",
+    id: 21,
+    title: "Various props 3",
     propsData: {
       buttonText: "Press me",
       isFull: true,
@@ -348,34 +214,22 @@ ${defaultScript()}`,
       isRounded: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isFull isWarning isRounded @click-button="clickHandler">
-    Press me
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Various3,
   },
   {
-    id: 19,
-    title: "TvButton: various props 4",
+    id: 22,
+    title: "Various props 4",
     propsData: {
       buttonText: "Press me",
       isSuccess: true,
       isDisabled: true,
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isSuccess isDisabled @click-button="clickHandler">
-    Press me
-  </tv-button>
-</template>
-
-${defaultScript()}`,
+    html: Various4,
   },
   {
     id: 23,
-    title: "TvButton: various props 5",
+    title: "Various props 5",
     propsData: {
       buttonText: "Press me",
       isRounded: true,
@@ -385,29 +239,6 @@ ${defaultScript()}`,
       },
       onClick: clickHandler,
     },
-    html: `<template>
-  <tv-button isRounded :customStyle="customStyle">
-    Press me
-  </tv-button>
-</template>
-
-<script>
-import { ref } from "vue";
-export default {
-  setup() {
-    const customStyle = ref({
-      backgroundColor: "#1144b3",
-      color: "#ffffff",
-    });
-   const clickHandler = () => {
-      console.log("clicked");
-    }
-    return {
-      customStyle,
-      clickHandler
-    };
-  }
-}
-</script>`,
+    html: Various5,
   },
 ];
