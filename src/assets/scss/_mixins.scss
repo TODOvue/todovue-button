@@ -96,5 +96,4 @@
 
 @mixin floatIcon($direction, $margin, $number) {
   float: #{$direction};
-  margin-#{$margin}: #{$number};
 }

@@ -185,6 +185,17 @@ export const demos = [
     html: TypeIcon,
   },
   {
+    id: 24,
+    title: "Type icon outlined (TODOvue)",
+    propsData: {
+      type: 'icon',
+      icon: "todovue",
+      isOutlined: true,
+      onClick: clickHandler,
+    },
+    html: TypeIcon,
+  },
+  {
     id: 19,
     title: "Various props 1",
     propsData: {
