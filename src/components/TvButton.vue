@@ -39,6 +39,18 @@ const props = defineProps({
     default: 'button',
   },
   ariaLabel: String,
+  circle: Boolean,
+  disabled: Boolean,
+  error: Boolean,
+  full: Boolean,
+  info: Boolean,
+  large: Boolean,
+  outlined: Boolean,
+  rounded: Boolean,
+  small: Boolean,
+  success: Boolean,
+  text: Boolean,
+  warning: Boolean,
 });
 
 const iconSrc = computed(() => processedIcons[props.icon] || null);
