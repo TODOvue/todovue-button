@@ -1,4 +1,4 @@
-import Default from './demos/default.vue?raw';
+import Default from "./demos/default.vue?raw";
 import DefaultProps from "./demos/defaultProps.vue?raw";
 import CustomStyle from "./demos/customStyle.vue?raw";
 import CustomStyleOutlined from "./demos/customStyleOutlined.vue?raw";
@@ -16,6 +16,8 @@ import Text from "./demos/text.vue?raw";
 import Icon from "./demos/icon.vue?raw";
 import IconLeft from "./demos/iconLeft.vue?raw";
 import TypeIcon from "./demos/typeIcon.vue?raw";
+import TypeIconOutlinedRemove from "./demos/typeIconOutlinedRemove.vue?raw";
+import TypeIconOutlinedCustom from "./demos/typeIconOutlinedCustom.vue?raw";
 import Various1 from "./demos/various1.vue?raw";
 import Various2 from "./demos/various2.vue?raw";
 import Various3 from "./demos/various3.vue?raw";
@@ -183,6 +185,32 @@ export const demos = [
       onClick: clickHandler,
     },
     html: TypeIcon,
+  },
+  {
+    id: 25,
+    title: "Type icon outlined (remove)",
+    propsData: {
+      type: 'icon',
+      icon: "remove",
+      isOutlined: true,
+      onClick: clickHandler,
+    },
+    html: TypeIconOutlinedRemove,
+  },
+  {
+    id: 25,
+    title: "Type icon Outlined with Custom Style (edit)",
+    propsData: {
+      type: 'icon',
+      icon: "edit",
+      isOutlined: true,
+      onClick: clickHandler,
+      customStyle: {
+        backgroundColor: "#5f31b7",
+        color: "#fff",
+      },
+    },
+    html: TypeIconOutlinedCustom,
   },
   {
     id: 24,
