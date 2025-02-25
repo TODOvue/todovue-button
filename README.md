@@ -66,23 +66,23 @@ const handleClick = () => {
 ---
 
 ## Props
-| Name         | Type    | Default  | Description                                                                        |
-|--------------|---------|----------|------------------------------------------------------------------------------------|
-| type         | String  | `button` | Defines the button type: `"button"` or `"icon"` (icon-only button).                |
-| customStyle  | Object  | `{}`     | Custom styles for the button (e.g., `{ backgroundColor: "#000", color: "#fff" }`). |
-| isOutlined   | Boolean | `false`  | If `true`, the button will be outlined instead of filled.                          |
-| isSmall      | Boolean | `false`  | If `true`, the button will be small.                                               |
-| isLarge      | Boolean | `false`  | If `true`, the button will be large.                                               |
-| isSuccess    | Boolean | `false`  | If `true`, the button will be styled as a success button.                          |
-| isInfo       | Boolean | `false`  | If `true`, the button will be styled as an info button.                            |
-| isWarning    | Boolean | `false`  | If `true`, the button will be styled as a warning button.                          |
-| isError      | Boolean | `false`  | If `true`, the button will be styled as an error button.                           |
-| isDisabled   | Boolean | `false`  | If `true`, the button will be disabled.                                            |
-| isText       | Boolean | `false`  | If `true`, the button will be text-only (similar to Bootstrap's text button).      |
-| icon         | String  | `null`   | The name of the icon to be displayed inside the button.                            |
-| iconPosition | String  | `right`  | The position of the icon (`left` or `right`).                                      |
-| buttonText   | String  | `null`   | The text inside the button (alternative to using `slot`).                          |
-| ariaLabel    | String  | `''`     | The aria-label attribute for the button.                                           |
+| Name                       | Type    | Default  | Description                                                                        |
+|----------------------------|---------|----------|------------------------------------------------------------------------------------|
+| type                       | String  | `button` | Defines the button type: `"button"` or `"icon"` (icon-only button).                |
+| customStyle                | Object  | `{}`     | Custom styles for the button (e.g., `{ backgroundColor: "#000", color: "#fff" }`). |
+| `isOutlined` or `outlined` | Boolean | `false`  | If `true`, the button will be outlined instead of filled.                          |
+| `isSmall` or `small`       | Boolean | `false`  | If `true`, the button will be small.                                               |
+| `isLarge` or `large`       | Boolean | `false`  | If `true`, the button will be large.                                               |
+| `isSuccess` or `success`   | Boolean | `false`  | If `true`, the button will be styled as a success button.                          |
+| `isInfo` or `info`         | Boolean | `false`  | If `true`, the button will be styled as an info button.                            |
+| `isWarning` or `warning`   | Boolean | `false`  | If `true`, the button will be styled as a warning button.                          |
+| `isError` or `error`       | Boolean | `false`  | If `true`, the button will be styled as an error button.                           |
+| `isDisabled` or `disabled` | Boolean | `false`  | If `true`, the button will be disabled.                                            |
+| `isText` or `text`         | Boolean | `false`  | If `true`, the button will be styled as a text button.                             |
+| icon                       | String  | `null`   | The name of the icon to be displayed inside the button.                            |
+| iconPosition               | String  | `right`  | The position of the icon (`left` or `right`).                                      |
+| buttonText                 | String  | `''`     | The text inside the button (alternative to using `slot`).                          |
+| ariaLabel                  | String  | `''`     | The aria-label attribute for the button.                                           |
 
 ---
 
