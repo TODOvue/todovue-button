@@ -46,7 +46,7 @@ const props = defineProps({
 });
 
 const icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });
-const emit = defineEmits(['clickButton']);
+const emit = defineEmits(['clickButton', 'click']);
 
 const iconContent = computed(() => icons[`../assets/icons/${props.icon}.svg`] || "");
 

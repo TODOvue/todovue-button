@@ -5,6 +5,7 @@ const useButton = (props, emit) => {
   
   const handleClick = () => {
     emit('clickButton');
+    emit('click');
   };
   
   const manageHover = (value) => {
