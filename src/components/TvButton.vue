@@ -38,6 +38,7 @@ const props = defineProps({
     type: String,
     default: 'button',
   },
+  ariaLabel: String,
 });
 
 const iconSrc = computed(() => processedIcons[props.icon] || null);
@@ -73,6 +74,7 @@ const buttonStyles = computed(() => ({
     @mouseleave="manageHover(false)"
     @mouseover="manageHover(true)"
     class="tv-btn"
+    :aria-label="ariaLabel"
   >
     <img
       :alt="`${icon}-icon`"
@@ -84,7 +86,7 @@ const buttonStyles = computed(() => ({
       class="tv-icon"
       v-if="iconSrc"
     />
-    <template v-if="buttonText || type === 'icon'">{{ buttonText }}</template>
+    <template v-if="buttonText">{{ buttonText }}</template>
     <slot v-else></slot>
   </button>
 </template>
