@@ -118,6 +118,7 @@ You can use the following icons (`icon="account"`):
 | Name         | Description                                                                 |
 |--------------|-----------------------------------------------------------------------------|
 | click-button | Emitted when the button is clicked. You can use it to call a function, etc. |
+| click        | Emitted when the button is clicked. You can use it to call a function, etc. |
 
 ---
 
