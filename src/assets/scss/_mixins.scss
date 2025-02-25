@@ -11,8 +11,8 @@
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  min-width: 110px;
-  padding: 0.8rem;
+  min-width: 100px;
+  padding: 0.7rem;
   transition: all 100ms ease-out;
   width: auto;
 }
@@ -37,7 +37,6 @@
 
 @mixin buttonText($background, $color) {
   @include backgroundColorAndTextColor($background, $color);
-  border: none;
   box-shadow: none;
 }
 
@@ -53,7 +52,7 @@
   &:active {
     background-color: color.adjust($background-color, $lightness: -15%);
     box-shadow: none;
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
 
   &.tv-btn-outlined {
@@ -73,9 +72,11 @@
 
   &.tv-btn-text {
     @include buttonText(transparent, $background-color);
+    @include buttonSize(80px, auto, 14px, 0.6rem 0);
+    border: 1px solid transparent;
 
     &:hover {
-      @include backgroundColorAndTextColor(transparent, color.adjust($background-color, $lightness: -10%));
+      @include backgroundColorAndTextColor(color.adjust($background-color, $lightness: 10%), color.adjust($background-color, $lightness: 90%));
     }
 
     &:active {

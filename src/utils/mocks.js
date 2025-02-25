@@ -151,7 +151,10 @@ export const demos = [
   {
     id: 15,
     title: "Text",
-    propsData: { buttonText: "Text", text: true, onClick: clickHandler },
+    propsData: { buttonText: "Text", text: true, onClick: clickHandler,  customStyle: {
+        color: "#ffffff",
+      },
+    },
     html: Text,
   },
   {
