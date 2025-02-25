@@ -12,9 +12,10 @@ const TvButton = defineAsyncComponent(/* webpackChunkName: "TvButton" */() => im
     :component="TvButton"
     :variants="demos"
     nameComponent="TvButton"
-    npmInstall="@todovue/tvbuttoon"
+    npmInstall="@todovue/tvbutton"
     sourceLink="https://github.com/TODOvue/todovue-button"
     urlClone="https://github.com/TODOvue/todovue-button.git"
+    version="1.1.0"
   ></tv-demo>
 </template>
 
