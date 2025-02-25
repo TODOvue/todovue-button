@@ -28,14 +28,6 @@ const clickHandler = () => {
   console.log("clicked");
 };
 
-const defaultScript = () => {
-  return `<script setup>
-  const clickHandler = () => {
-    console.log("clicked");
-  }
-</script>`;
-};
-
 export const demos = [
   {
     id: 1,
@@ -97,7 +89,7 @@ export const demos = [
     propsData: {
       buttonText: "Is outlined",
       customStyle: { backgroundColor: "#5f31b7", color: "#fff" },
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
     },
     html: CustomStyleOutlined,

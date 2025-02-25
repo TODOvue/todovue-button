@@ -43,7 +43,7 @@ const useButton = (props, emit) => {
       boxShadow: `0 0 5px ${props.customStyle.backgroundColor || 'transparent'}`,
     };
     
-    if (props.isOutlined) {
+    if (props.isOutlined || props.outlined) {
       return {
         backgroundColor: 'transparent',
         border: `1px solid ${props.customStyle.backgroundColor}`,
@@ -58,7 +58,7 @@ const useButton = (props, emit) => {
   const buttonStyleHover = computed(() => {
     if (!props.customStyle) return {};
     
-    return props.isOutlined
+    return props.isOutlined || props.outlined
       ? {
         backgroundColor: props.customStyle.backgroundColor,
         color: props.customStyle.color,
