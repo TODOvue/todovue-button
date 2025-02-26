@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.1.0] - 25/02/2025
 
 ### Added
 - Add `clone.svg`, `download.svg` and `update.svg` icons.
@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add new version of the project.
 
+[1.1.0]: https://github.com/TODOvue/todovue-button/pull/9/files
 [1.0.3]: https://github.com/TODOvue/todovue-button/pull/6/files
 [1.0.2]: https://github.com/TODOvue/todovue-button/pull/5/files
 [1.0.1]: https://github.com/TODOvue/todovue-button/pull/4/files
