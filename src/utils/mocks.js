@@ -179,7 +179,7 @@ export const demos = [
     html: TypeIcon,
   },
   {
-    id: 25,
+    id: 26,
     title: "Type icon outlined (remove)",
     propsData: {
       type: 'icon',
