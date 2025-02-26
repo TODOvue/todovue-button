@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Add `clone.svg`, `download.svg` and `update.svg` icons.
+- Add `ariaLabel` prop to improve accessibility.
+- Add `todovue.svg` icon.
+- Add `@click` event to the button.
+- Refactor prop names for consistency (`isSuccess` → `success`, etc.).
+
+### Changed
+- Update button styles.
+- Update demos to reflect new props.
+
+### Fixed
+- Fix icon rendering to correctly apply color changes.
+
 ## [1.0.3] - 24/02/2025
 
 ### Changed
