@@ -15,11 +15,11 @@
   }
 
   &.tv-btn-small {
-    @include mixins.buttonSize(80px, auto, 10px, 0.7rem 0.5rem);
+    @include mixins.buttonSize(80px, auto, 12px, 0.6rem 0);
   }
 
   &.tv-btn-large {
-    @include mixins.buttonSize(180px, auto, 16px, 1rem 1.5rem);
+    @include mixins.buttonSize(150px, auto, 15px, 1rem 0);
   }
 
   &.tv-btn-success {

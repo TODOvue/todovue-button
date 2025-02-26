@@ -10,27 +10,6 @@
 
 .tv-icon {
   @include mixins.defaultIconSize(18px);
-  color: white;
-}
-
-.tv-icon-white {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg);
-}
-
-.tv-icon-black {
-  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(360deg);
-}
-
-.tv-icon-red {
-  filter: invert(28%) sepia(100%) saturate(5826%) hue-rotate(360deg);
-}
-
-.tv-icon-blue {
-  filter: invert(30%) sepia(93%) saturate(2082%) hue-rotate(200deg);
-}
-
-.tv-icon-green {
-  filter: invert(32%) sepia(84%) saturate(1203%) hue-rotate(93deg);
 }
 
 .tv-icon-position-left {

@@ -1,11 +1,11 @@
 <template>
   <tv-button
-    rounded
+    icon="edit"
+    type="icon"
+    outlined
     :customStyle="customStyle"
-    @click="clickHandler"
-  >
-    Press me
-  </tv-button>
+    @click-button="clickHandler"
+  />
 </template>
 
 <script setup>
@@ -14,8 +14,8 @@ import { defineAsyncComponent, ref } from 'vue';
 const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'));
 
 const customStyle = ref({
-  backgroundColor: '#1144b3',
-  color: '#fff',
+  backgroundColor: '#5f31b7',
+  color: '#fff', // The color will be used for the hover.
 });
 
 const clickHandler = () => {

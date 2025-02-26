@@ -5,6 +5,7 @@ const useButton = (props, emit) => {
   
   const handleClick = () => {
     emit('clickButton');
+    emit('click');
   };
   
   const manageHover = (value) => {
@@ -19,17 +20,17 @@ const useButton = (props, emit) => {
   };
   
   const buttonClasses = computed(() => ({
-    'tv-btn-rounded': props.isRounded,
-    'tv-btn-full': props.isFull,
-    'tv-btn-outlined': props.isOutlined,
-    'tv-btn-small': props.isSmall,
-    'tv-btn-large': props.isLarge,
-    'tv-btn-success': props.isSuccess,
-    'tv-btn-info': props.isInfo,
-    'tv-btn-warning': props.isWarning,
-    'tv-btn-error': props.isError,
-    'tv-btn-disabled': props.isDisabled,
-    'tv-btn-text': props.isText,
+    'tv-btn-rounded': props.isRounded || props.rounded,
+    'tv-btn-full': props.isFull || props.full,
+    'tv-btn-outlined': props.isOutlined || props.outlined,
+    'tv-btn-small': props.isSmall || props.small,
+    'tv-btn-large': props.isLarge || props.large,
+    'tv-btn-success': props.isSuccess || props.success,
+    'tv-btn-info': props.isInfo || props.info,
+    'tv-btn-warning': props.isWarning || props.warning,
+    'tv-btn-error': props.isError || props.error,
+    'tv-btn-disabled': props.isDisabled || props.disabled,
+    'tv-btn-text': props.isText || props.text,
     'tv-btn-icon': props.type === 'icon',
   }));
   
@@ -42,7 +43,7 @@ const useButton = (props, emit) => {
       boxShadow: `0 0 5px ${props.customStyle.backgroundColor || 'transparent'}`,
     };
     
-    if (props.isOutlined) {
+    if (props.isOutlined || props.outlined) {
       return {
         backgroundColor: 'transparent',
         border: `1px solid ${props.customStyle.backgroundColor}`,
@@ -57,7 +58,7 @@ const useButton = (props, emit) => {
   const buttonStyleHover = computed(() => {
     if (!props.customStyle) return {};
     
-    return props.isOutlined
+    return props.isOutlined || props.outlined
       ? {
         backgroundColor: props.customStyle.backgroundColor,
         color: props.customStyle.color,

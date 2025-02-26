@@ -1,4 +1,4 @@
-import Default from './demos/default.vue?raw';
+import Default from "./demos/default.vue?raw";
 import DefaultProps from "./demos/defaultProps.vue?raw";
 import CustomStyle from "./demos/customStyle.vue?raw";
 import CustomStyleOutlined from "./demos/customStyleOutlined.vue?raw";
@@ -16,6 +16,8 @@ import Text from "./demos/text.vue?raw";
 import Icon from "./demos/icon.vue?raw";
 import IconLeft from "./demos/iconLeft.vue?raw";
 import TypeIcon from "./demos/typeIcon.vue?raw";
+import TypeIconOutlinedRemove from "./demos/typeIconOutlinedRemove.vue?raw";
+import TypeIconOutlinedCustom from "./demos/typeIconOutlinedCustom.vue?raw";
 import Various1 from "./demos/various1.vue?raw";
 import Various2 from "./demos/various2.vue?raw";
 import Various3 from "./demos/various3.vue?raw";
@@ -24,14 +26,6 @@ import Various5 from "./demos/various5.vue?raw";
 
 const clickHandler = () => {
   console.log("clicked");
-};
-
-const defaultScript = () => {
-  return `<script setup>
-  const clickHandler = () => {
-    console.log("clicked");
-  }
-</script>`;
 };
 
 export const demos = [
@@ -60,7 +54,7 @@ export const demos = [
   {
     id: 4,
     title: "Small",
-    propsData: { buttonText: "Small", isSmall: true, onClick: clickHandler },
+    propsData: { buttonText: "Small", small: true, onClick: clickHandler },
     html: Small,
   },
   {
@@ -76,7 +70,7 @@ export const demos = [
   {
     id: 6,
     title: "Full",
-    propsData: { buttonText: "Full", isFull: true, onClick: clickHandler },
+    propsData: { buttonText: "Full", full: true, onClick: clickHandler },
     html: Full,
   },
   {
@@ -95,7 +89,7 @@ export const demos = [
     propsData: {
       buttonText: "Is outlined",
       customStyle: { backgroundColor: "#5f31b7", color: "#fff" },
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
     },
     html: CustomStyleOutlined,
@@ -103,7 +97,7 @@ export const demos = [
   {
     id: 9,
     title: "Large",
-    propsData: { buttonText: "Large", isLarge: true, onClick: clickHandler },
+    propsData: { buttonText: "Large", large: true, onClick: clickHandler },
     html: Large,
   },
   {
@@ -119,7 +113,7 @@ export const demos = [
   {
     id: 11,
     title: "Info",
-    propsData: { buttonText: "Info", isInfo: true, onClick: clickHandler },
+    propsData: { buttonText: "Info", info: true, onClick: clickHandler },
     html: Info,
   },
   {
@@ -135,7 +129,7 @@ export const demos = [
   {
     id: 13,
     title: "Error",
-    propsData: { buttonText: "Error", isError: true, onClick: clickHandler },
+    propsData: { buttonText: "Error", error: true, onClick: clickHandler },
     html: Error,
   },
   {
@@ -151,7 +145,10 @@ export const demos = [
   {
     id: 15,
     title: "Text",
-    propsData: { buttonText: "Text", isText: true, onClick: clickHandler },
+    propsData: { buttonText: "Text", text: true, onClick: clickHandler,  customStyle: {
+        color: "#ffffff",
+      },
+    },
     html: Text,
   },
   {
@@ -177,6 +174,43 @@ export const demos = [
     propsData: {
       type: 'icon',
       icon: "help",
+      onClick: clickHandler,
+    },
+    html: TypeIcon,
+  },
+  {
+    id: 26,
+    title: "Type icon outlined (remove)",
+    propsData: {
+      type: 'icon',
+      icon: "remove",
+      isOutlined: true,
+      onClick: clickHandler,
+    },
+    html: TypeIconOutlinedRemove,
+  },
+  {
+    id: 25,
+    title: "Type icon Outlined with Custom Style (edit)",
+    propsData: {
+      type: 'icon',
+      icon: "edit",
+      isOutlined: true,
+      onClick: clickHandler,
+      customStyle: {
+        backgroundColor: "#5f31b7",
+        color: "#fff",
+      },
+    },
+    html: TypeIconOutlinedCustom,
+  },
+  {
+    id: 24,
+    title: "Type icon outlined (TODOvue)",
+    propsData: {
+      type: 'icon',
+      icon: "todovue",
+      isOutlined: true,
       onClick: clickHandler,
     },
     html: TypeIcon,

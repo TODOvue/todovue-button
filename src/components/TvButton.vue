@@ -2,14 +2,6 @@
 import { computed } from 'vue';
 import useButton from '../composables/useButton';
 
-const icons = import.meta.glob('../assets/icons/*.svg', { eager: true });
-
-const processedIcons = Object.keys(icons).reduce((acc, path) => {
-  const key = path.split('/').pop().replace('.svg', '');
-  acc[key] = new URL(icons[path].default, import.meta.url).href;
-  return acc;
-}, {});
-
 const props = defineProps({
   buttonText: String,
   customStyle: Object,
@@ -38,13 +30,25 @@ const props = defineProps({
     type: String,
     default: 'button',
   },
+  ariaLabel: String,
+  circle: Boolean,
+  disabled: Boolean,
+  error: Boolean,
+  full: Boolean,
+  info: Boolean,
+  large: Boolean,
+  outlined: Boolean,
+  rounded: Boolean,
+  small: Boolean,
+  success: Boolean,
+  text: Boolean,
+  warning: Boolean,
 });
 
-const iconSrc = computed(() => processedIcons[props.icon] || null);
-const emit = defineEmits(['clickButton']);
-const iconColorClass = computed(() => {
-  return props.iconColor ? `tv-icon-${props.iconColor.replace('#', '')}` : 'tv-icon-white';
-});
+const icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });
+const emit = defineEmits(['clickButton', 'click']);
+
+const iconContent = computed(() => icons[`../assets/icons/${props.icon}.svg`] || "");
 
 const {
   buttonClasses,
@@ -73,18 +77,15 @@ const buttonStyles = computed(() => ({
     @mouseleave="manageHover(false)"
     @mouseover="manageHover(true)"
     class="tv-btn"
+    :aria-label="ariaLabel"
   >
-    <img
-      :alt="`${icon}-icon`"
-      :class="[
-        `tv-icon-position-${iconPosition}`,
-        iconColorClass
-      ]"
-      :src="iconSrc"
+    <span
+      v-if="icon"
+      v-html="iconContent"
       class="tv-icon"
-      v-if="iconSrc"
+      :class="[`tv-icon-position-${iconPosition}`]"
     />
-    <template v-if="buttonText || type === 'icon'">{{ buttonText }}</template>
+    <template v-if="buttonText">{{ buttonText }}</template>
     <slot v-else></slot>
   </button>
 </template>

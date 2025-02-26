@@ -1,11 +1,10 @@
 <template>
   <tv-button
-    large
-    info
-    @click="clickHandler"
-  >
-    Press me
-  </tv-button>
+    icon="remove"
+    type="icon"
+    outlined
+    @click-button="clickHandler"
+  />
 </template>
 
 <script setup>
