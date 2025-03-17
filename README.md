@@ -15,9 +15,9 @@
 - [Events](#events)
 - [Customize](#customize)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-button/blob/master/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-button/blob/master/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-button/blob/master/LICENSE)
+- [Changelog](https://github.com/TODOvue/todovue-button/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/todovue-button/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/todovue-button/blob/main/LICENSE)
 
 ## Installation
 Install with npm or yarn
@@ -30,7 +30,7 @@ yarn add @todovue/tvbutton
 
 Import the component:
 ```js
-import { TvButton } from "@todovue/tvbutton";
+import TvButton from "@todovue/tvbutton";
 ```
 
 You can also register it globally in **main.js**:
@@ -162,25 +162,6 @@ git clone https://github.com/TODOvue/todovue-button.git
 cd todovue-button
 yarn install
 ```
-
-### 🔹 Run the demo
-```bash
-yarn demo
-```
-### 🔹 Run tests
-```bash
-yarn test:unit
-```
-### 🔹 Run the linter
-```bash
-yarn lint
-```
-### 🔹 Build the project (Not required for PRs)
-```bash
-yarn build
-```
-
 ---
-
 ## License
-[MIT](https://github.com/TODOvue/todovue-button/blob/master/LICENSE)
+[MIT](https://github.com/TODOvue/todovue-button/blob/main/LICENSE)
