@@ -9,9 +9,7 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, ref } from 'vue';
-
-const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'));
+import TvButton from '@todovue/tvbutton';
 
 const customStyle = ref({
   color: "#ffffff",

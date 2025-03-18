@@ -10,9 +10,7 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue';
-
-const TvButton = defineAsyncComponent(() => import('../../components/TvButton.vue'));
+import TvButton from '@todovue/tvbutton';
 
 const clickHandler = () => {
   console.log('clicked');
