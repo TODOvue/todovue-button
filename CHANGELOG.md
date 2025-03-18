@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 17/03/2025
+
+### Fixed
+- Fixed imports in demos.
+- Fixed version in page demo.
+
 ## [1.1.1] - 17/03/2025
 
 ### Fixed
@@ -55,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add new version of the project.
 
+[1.1.2]: https://github.com/TODOvue/todovue-button/pull/11/files
 [1.1.1]: https://github.com/TODOvue/todovue-button/pull/10/files
 [1.1.0]: https://github.com/TODOvue/todovue-button/pull/9/files
 [1.0.3]: https://github.com/TODOvue/todovue-button/pull/6/files
